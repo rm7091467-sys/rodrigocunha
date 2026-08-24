@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink font-body text-gray-300 antialiased;
+    margin: 0;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-white;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: linear-gradient(
+      135deg,
+      rgba(212, 175, 55, 0.06) 0%,
+      rgba(255, 255, 255, 0.03) 50%,
+      rgba(212, 175, 55, 0.04) 100%
+    );
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .text-gradient-gold {
+    background: linear-gradient(90deg, #E5C76B 0%, #D4AF37 40%, #A8861F 70%, #D4AF37 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .animate-delay-100 { animation-delay: 0.1s; opacity: 0; }
+  .animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
+  .animate-delay-300 { animation-delay: 0.3s; opacity: 0; }
+  .animate-delay-400 { animation-delay: 0.4s; opacity: 0; }
+  .animate-delay-500 { animation-delay: 0.5s; opacity: 0; }
+
+  .gold-glow {
+    box-shadow: 0 8px 30px -8px rgba(212, 175, 55, 0.6);
+  }
+  .gold-glow:hover {
+    box-shadow: 0 12px 44px -6px rgba(212, 175, 55, 0.85);
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
